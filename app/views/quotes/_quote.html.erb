@@ -1,0 +1,15 @@
+<div class="card">
+<div class="card-content is-flex is-justify-content-space-between">
+    <%= link_to quote.name, quote_path(quote) %>
+    <div class="is-flex" style="gap: 10px;">
+        <%= button_to "Delete",
+                      quote_path(quote),
+                      method: :delete,
+                      class: "button is-danger"%>
+
+        <%= link_to "Edit",
+                      edit_quote_path(quote),
+                      class: "button is-primary" %>
+    </div>
+</div>
+</div>
