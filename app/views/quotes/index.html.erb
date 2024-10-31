@@ -1,11 +1,13 @@
 <main class="section container">
-  <div class="is-flex is-justify-content-space-between">
-    <h1 class="title">Quotes</h1>
-    <span>   
-    <%= link_to "New quote",
-                new_quote_path,
-                class: "button is-primary" %>
-    </span>
-  </div>
+  <%= turbo_frame_tag id="first_turbo_frame" do %>
+      <div class="is-flex is-justify-content-space-between">
+        <h1 class="title">Quotes</h1>
+        <span>   
+        <%= link_to "New quote",
+                    new_quote_path,
+                    class: "button is-primary" %>
+        </span>
+      </div>
+  <% end %>
   <%= render @quotes %>
 </main>
